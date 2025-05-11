@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validasi Email</title>
+</head>
+<body>
+  <h2>Validasi Email</h2>
+  <input type="text" id="email" placeholder="Masukkan email">
+  <button onclick="cekEmail()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cekEmail() {
+      let email = document.getElementById("email").value;
+      let pola = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (pola.test(email)) {
+        document.getElementById("hasil").innerText = "Email valid.";
+      } else {
+        document.getElementById("hasil").innerText = "Email tidak valid.";
+      }
+    }
+  </script>
+</body>
+</html>

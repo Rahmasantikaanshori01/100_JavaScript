@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jumlah Vokal</title>
+</head>
+<body>
+  <h2>Hitung Huruf Vokal</h2>
+  <input type="text" id="teks" placeholder="Masukkan teks">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      let teks = document.getElementById("teks").value.toLowerCase();
+      let jumlah = 0;
+      for (let i = 0; i < teks.length; i++) {
+        if ("aiueo".includes(teks[i])) jumlah++;
+      }
+      document.getElementById("hasil").innerText = "Jumlah vokal: " + jumlah;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ulang Teks</title>
+</head>
+<body>
+  <h2>Ulangi Teks</h2>
+  <input type="number" id="jumlah" placeholder="Jumlah ulang">
+  <button onclick="ulangTeks()">Tampilkan</button>
+  <p id="hasil"></p>
+
+  <script>
+    function ulangTeks() {
+      let jumlah = parseInt(document.getElementById("jumlah").value);
+      let hasil = "";
+      for (let i = 0; i < jumlah; i++) {
+        hasil += "Halo! ";
+      }
+      document.getElementById("hasil").innerText = hasil;
+    }
+  </script>
+</body>
+</html>

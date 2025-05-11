@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Huruf Kecil</title>
+</head>
+<body>
+  <h2>Ubah ke Huruf Kecil</h2>
+  <input type="text" id="teks" placeholder="Tulis sesuatu">
+  <button onclick="ubah()">Ubah</button>
+  <p id="hasil"></p>
+
+  <script>
+    function ubah() {
+      let teks = document.getElementById("teks").value;
+      document.getElementById("hasil").innerText = teks.toLowerCase();
+    }
+  </script>
+</body>
+</html>

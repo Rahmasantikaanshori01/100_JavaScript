@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalender Bulan Ini</title>
+</head>
+<body>
+  <h2>Kalender Bulan Ini</h2>
+  <p id="kalender"></p>
+
+  <script>
+    function tampilkanKalender() {
+      let sekarang = new Date();
+      let bulan = sekarang.getMonth() + 1;
+      let tahun = sekarang.getFullYear();
+      let tanggal = `${bulan}-${tahun}`;
+      document.getElementById("kalender").innerText = `Kalender: ${tanggal}`;
+    }
+    tampilkanKalender();
+  </script>
+</body>
+</html>

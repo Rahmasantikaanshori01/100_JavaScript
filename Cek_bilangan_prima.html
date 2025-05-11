@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cek Bilangan Prima</title>
+</head>
+<body>
+  <h2>Cek Bilangan Prima</h2>
+  <input type="number" id="angka" placeholder="Masukkan angka">
+  <button onclick="cekPrima()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cekPrima() {
+      let angka = parseInt(document.getElementById("angka").value);
+      let isPrima = true;
+      if (angka < 2) isPrima = false;
+      for (let i = 2; i <= Math.sqrt(angka); i++) {
+        if (angka % i === 0) {
+          isPrima = false;
+          break;
+        }
+      }
+      document.getElementById("hasil").innerText = isPrima ? "Bilangan Prima" : "Bukan Bilangan Prima";
+    }
+  </script>
+</body>
+</html>

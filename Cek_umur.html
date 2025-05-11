@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cek Umur</title>
+</head>
+<body>
+  <h2>Hitung Umur dari Tahun Lahir</h2>
+  <input type="number" id="tahun" placeholder="Tahun lahir">
+  <button onclick="hitung()">Hitung</button>
+  <p>Umur: <span id="hasil"></span> tahun</p>
+
+  <script>
+    function hitung() {
+      let tahun = parseInt(document.getElementById("tahun").value);
+      let umur = new Date().getFullYear() - tahun;
+      document.getElementById("hasil").innerText = umur;
+    }
+  </script>
+</body>
+</html>

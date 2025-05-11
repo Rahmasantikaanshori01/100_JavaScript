@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Pangkat</title>
+</head>
+<body>
+  <h2>Kalkulator Pangkat</h2>
+  <input type="number" id="angka" placeholder="Angka">
+  <input type="number" id="pangkat" placeholder="Pangkat">
+  <button onclick="hitung()">Hitung</button>
+  <p>Hasil: <span id="hasil"></span></p>
+
+  <script>
+    function hitung() {
+      let a = parseFloat(document.getElementById("angka").value);
+      let p = parseInt(document.getElementById("pangkat").value);
+      document.getElementById("hasil").innerText = a ** p;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Pembagian</title>
+</head>
+<body>
+  <h2>Kalkulator Pembagian</h2>
+  <input type="number" id="angka1" placeholder="Angka pertama">
+  <input type="number" id="angka2" placeholder="Angka kedua">
+  <button onclick="hitungPembagian()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitungPembagian() {
+      let angka1 = parseFloat(document.getElementById("angka1").value);
+      let angka2 = parseFloat(document.getElementById("angka2").value);
+      if (angka2 === 0) {
+        document.getElementById("hasil").innerText = "Tidak dapat dibagi dengan 0!";
+      } else {
+        let hasil = angka1 / angka2;
+        document.getElementById("hasil").innerText = "Hasil Pembagian: " + hasil;
+      }
+    }
+  </script>
+</body>
+</html>

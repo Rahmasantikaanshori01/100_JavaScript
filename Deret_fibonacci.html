@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fibonacci</title>
+</head>
+<body>
+  <h2>Deret Fibonacci</h2>
+  <input type="number" id="jumlah" placeholder="Jumlah angka">
+  <button onclick="fibonacci()">Tampilkan</button>
+  <p id="hasil"></p>
+
+  <script>
+    function fibonacci() {
+      let n = parseInt(document.getElementById("jumlah").value);
+      let a = 0, b = 1, hasil = [a, b];
+      for (let i = 2; i < n; i++) {
+        let next = a + b;
+        hasil.push(next);
+        a = b;
+        b = next;
+      }
+      document.getElementById("hasil").innerText = hasil.join(", ");
+    }
+  </script>
+</body>
+</html>

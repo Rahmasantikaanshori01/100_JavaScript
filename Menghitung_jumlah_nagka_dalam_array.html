@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jumlah Angka dalam Array</title>
+</head>
+<body>
+  <h2>Jumlah Angka dalam Array</h2>
+  <button onclick="hitungJumlah()">Hitung Jumlah</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitungJumlah() {
+      let angka = [10, 20, 30, 40, 50];
+      let jumlah = angka.reduce((a, b) => a + b, 0);
+      document.getElementById("hasil").innerText = "Jumlah: " + jumlah;
+    }
+  </script>
+</body>
+</html>

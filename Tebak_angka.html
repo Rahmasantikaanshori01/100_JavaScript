@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tebak Angka</title>
+</head>
+<body>
+  <h2>Tebak Angka (1-100)</h2>
+  <input type="number" id="tebakan" placeholder="Tebak angka">
+  <button onclick="cek()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    let angkaTebakan = Math.floor(Math.random() * 100) + 1;
+
+    function cek() {
+      let tebakan = parseInt(document.getElementById("tebakan").value);
+      let hasil = tebakan === angkaTebakan ? "Tebakan Anda benar!" : "Tebakan Anda salah!";
+      document.getElementById("hasil").innerText = hasil;
+    }
+  </script>
+</body>
+</html>

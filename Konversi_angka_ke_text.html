@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Angka ke Teks</title></head>
+<body>
+  <h2>Konversi Angka ke Teks</h2>
+  <input type="number" id="angka" placeholder="Masukkan angka 1-10">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    const angkaTeks = ["Nol","Satu","Dua","Tiga","Empat","Lima","Enam","Tujuh","Delapan","Sembilan","Sepuluh"];
+    function konversi() {
+      let angka = parseInt(document.getElementById("angka").value);
+      let teks = angkaTeks[angka] || "Diluar jangkauan";
+      document.getElementById("hasil").innerText = teks;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jam Sekarang</title>
+</head>
+<body>
+  <h2>Waktu Sekarang:</h2>
+  <p id="jam"></p>
+
+  <script>
+    function tampilJam() {
+      let sekarang = new Date();
+      document.getElementById("jam").innerText = sekarang.toLocaleTimeString();
+    }
+    setInterval(tampilJam, 1000);
+  </script>
+</body>
+</html>

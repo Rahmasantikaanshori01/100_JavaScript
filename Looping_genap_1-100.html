@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bilangan Genap</title>
+</head>
+<body>
+  <h2>Bilangan Genap 1–100</h2>
+  <ul id="genap"></ul>
+
+  <script>
+    let ul = document.getElementById("genap");
+    for (let i = 2; i <= 100; i += 2) {
+      let li = document.createElement("li");
+      li.innerText = i;
+      ul.appendChild(li);
+    }
+  </script>
+</body>
+</html>

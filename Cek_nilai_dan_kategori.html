@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kategori Nilai</title>
+</head>
+<body>
+  <h2>Kategori Nilai</h2>
+  <input type="number" id="nilai" placeholder="Masukkan nilai">
+  <button onclick="cek()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cek() {
+      let n = parseInt(document.getElementById("nilai").value);
+      let keterangan = "";
+      if (n >= 90) keterangan = "A";
+      else if (n >= 80) keterangan = "B";
+      else if (n >= 70) keterangan = "C";
+      else if (n >= 60) keterangan = "D";
+      else keterangan = "E";
+      document.getElementById("hasil").innerText = "Nilai: " + keterangan;
+    }
+  </script>
+</body>
+</html>

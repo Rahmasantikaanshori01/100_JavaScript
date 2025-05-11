@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Derajat ke Radian</title>
+</head>
+<body>
+  <h2>Konversi Derajat ke Radian</h2>
+  <input type="number" id="derajat" placeholder="Masukkan derajat">
+  <button onclick="konversi()">Konversi</button>
+  <p>Radian: <span id="hasil"></span></p>
+
+  <script>
+    function konversi() {
+      let deg = parseFloat(document.getElementById("derajat").value);
+      let rad = deg * (Math.PI / 180);
+      document.getElementById("hasil").innerText = rad.toFixed(4);
+    }
+  </script>
+</body>
+</html>

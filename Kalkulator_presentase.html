@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Persentase</title>
+</head>
+<body>
+  <h2>Kalkulator Persentase</h2>
+  <input type="number" id="nilai" placeholder="Nilai">
+  <input type="number" id="total" placeholder="Total">
+  <button onclick="hitung()">Hitung</button>
+  <p>Persentase: <span id="hasil"></span>%</p>
+
+  <script>
+    function hitung() {
+      let nilai = parseFloat(document.getElementById("nilai").value);
+      let total = parseFloat(document.getElementById("total").value);
+      let persen = (nilai / total) * 100;
+      document.getElementById("hasil").innerText = persen.toFixed(2);
+    }
+  </script>
+</body>
+</html>

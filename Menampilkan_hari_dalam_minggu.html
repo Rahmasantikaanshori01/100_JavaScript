@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hari dalam Minggu</title>
+</head>
+<body>
+  <h2>Hari dalam Minggu</h2>
+  <p id="hari"></p>
+
+  <script>
+    let hari = new Date().toLocaleString('id-ID', { weekday: 'long' });
+    document.getElementById("hari").innerText = hari;
+  </script>
+</body>
+</html>

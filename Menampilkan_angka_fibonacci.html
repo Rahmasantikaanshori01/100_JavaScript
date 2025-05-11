@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angka Fibonacci</title>
+</head>
+<body>
+  <h2>Angka Fibonacci</h2>
+  <input type="number" id="n" placeholder="Masukkan jumlah angka">
+  <button onclick="fibonacci()">Tampilkan</button>
+  <p id="hasil"></p>
+
+  <script>
+    function fibonacci() {
+      let n = parseInt(document.getElementById("n").value);
+      let fibonacciArr = [0, 1];
+      for (let i = 2; i < n; i++) {
+        fibonacciArr.push(fibonacciArr[i - 1] + fibonacciArr[i - 2]);
+      }
+      document.getElementById("hasil").innerText = fibonacciArr.join(", ");
+    }
+  </script>
+</body>
+</html>

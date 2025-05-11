@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Status Koneksi</title>
+</head>
+<body>
+  <h2>Status Koneksi:</h2>
+  <p id="status"></p>
+
+  <script>
+    function updateStatus() {
+      document.getElementById("status").innerText = navigator.onLine ? "Online" : "Offline";
+    }
+    window.addEventListener('online', updateStatus);
+    window.addEventListener('offline', updateStatus);
+    updateStatus();
+  </script>
+</body>
+</html>

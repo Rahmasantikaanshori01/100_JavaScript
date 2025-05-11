@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Format Rupiah</title>
+</head>
+<body>
+  <h2>Format Angka ke Rupiah</h2>
+  <input type="number" id="angka" placeholder="Masukkan angka">
+  <button onclick="format()">Format</button>
+  <p id="hasil"></p>
+
+  <script>
+    function format() {
+      const angka = parseFloat(document.getElementById("angka").value);
+      document.getElementById("hasil").innerText = "Rp " + angka.toLocaleString("id-ID");
+    }
+  </script>
+</body>
+</html>

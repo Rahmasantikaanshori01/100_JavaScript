@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persegi Panjang</title>
+</head>
+<body>
+    <h2>Persegi Panjang</h2>
+    <input id="pp" placeholder="Panjang">
+    <input id="lp" placeholder="Lebar">
+    <button onclick="hitungPP()">Hitung</button>
+  
+    <script>
+      function hitungPP() {
+        let p = parseFloat(document.getElementById('pp').value);
+        let l = parseFloat(document.getElementById('lp').value);
+        let luas = p * l;
+        let keliling = 2 * (p + l);
+        console.log("=== Persegi Panjang ===");
+        console.log("Luas:", luas);
+        console.log("Keliling:", keliling);
+      }
+    </script>
+  </body>
+</html>

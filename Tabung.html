@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabung</title>
+</head>
+<body>
+    <h2>Tabung</h2>
+
+    <label for="jari">Jari-jari (r):</label>
+    <input type="number" id="jari"><br><br>
+
+    <label for="tinggi">Tinggi (t):</label>
+    <input type="number" id="tinggi"><br><br>
+
+    <button id="hitung">Hitung</button>
+
+    <script>
+        const PHI = 3.14;
+        const jari = document.getElementById('jari');
+        const tinggi = document.getElementById('tinggi');
+        const hitung = document.getElementById('hitung');
+
+        hitung.addEventListener('click', function () {
+            let r = parseFloat(jari.value);
+            let t = parseFloat(tinggi.value);
+
+            if (isNaN(r) || isNaN(t)) {
+                console.log("Input tidak valid. Masukkan angka.");
+                return;
+            }
+
+            let volume = PHI * r * r * t;
+            let luasPermukaan = 2 * PHI * r * (r + t);
+
+            console.log("=== Hasil Perhitungan Tabung ===");
+            console.log("Jari-jari:", r);
+            console.log("Tinggi:", t);
+            console.log("Volume:", volume.toFixed(2));
+            console.log("Luas Permukaan:", luasPermukaan.toFixed(2));
+        });
+    </script>
+</body>
+</html>

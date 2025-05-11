@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tanggal Hari Ini</title>
+</head>
+<body>
+  <h2>Tanggal Hari Ini:</h2>
+  <p id="tanggal"></p>
+
+  <script>
+    let tanggal = new Date();
+    document.getElementById("tanggal").innerText = tanggal.toDateString();
+  </script>
+</body>
+</html>

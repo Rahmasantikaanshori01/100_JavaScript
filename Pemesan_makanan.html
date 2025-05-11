@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pemesanan Makanan</title>
+</head>
+<body>
+  <h2>Pemesanan Makanan</h2>
+  <input type="text" id="nama" placeholder="Nama"><br>
+  <select id="menu">
+    <option value="Nasi Goreng">Nasi Goreng</option>
+    <option value="Mie Ayam">Mie Ayam</option>
+    <option value="Bakso">Bakso</option>
+  </select><br>
+  <button onclick="pesan()">Pesan</button>
+  <p id="output"></p>
+
+  <script>
+    function pesan() {
+      let nama = document.getElementById("nama").value;
+      let menu = document.getElementById("menu").value;
+      document.getElementById("output").innerText = 
+        `Halo ${nama}, pesanan Anda: ${menu}`;
+    }
+  </script>
+</body>
+</html>

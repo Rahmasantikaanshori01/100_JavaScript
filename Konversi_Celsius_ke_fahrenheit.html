@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Celsius ke Fahrenheit</title>
+</head>
+<body>
+  <h2>Konversi Celsius ke Fahrenheit</h2>
+  <input type="number" id="celsius" placeholder="Suhu dalam °C">
+  <button onclick="konversi()">Konversi</button>
+  <p>Fahrenheit: <span id="hasil"></span></p>
+
+  <script>
+    function konversi() {
+      let c = parseFloat(document.getElementById("celsius").value);
+      let f = (c * 9/5) + 32;
+      document.getElementById("hasil").innerText = f.toFixed(2);
+    }
+  </script>
+</body>
+</html>

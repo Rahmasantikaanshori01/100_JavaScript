@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Penghitung Jam</title>
+</head>
+<body>
+  <h2>Jam Saat Ini</h2>
+  <p id="jam"></p>
+
+  <script>
+    function tampilkanJam() {
+      let sekarang = new Date();
+      let jam = sekarang.getHours().toString().padStart(2, '0');
+      let menit = sekarang.getMinutes().toString().padStart(2, '0');
+      let detik = sekarang.getSeconds().toString().padStart(2, '0');
+      document.getElementById("jam").innerText = `${jam}:${menit}:${detik}`;
+    }
+    setInterval(tampilkanJam, 1000);
+  </script>
+</body>
+</html>

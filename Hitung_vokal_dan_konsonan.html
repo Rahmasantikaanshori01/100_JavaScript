@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hitung Vokal dan Konsonan</title>
+</head>
+<body>
+  <h2>Hitung Vokal dan Konsonan</h2>
+  <input type="text" id="teks" placeholder="Masukkan teks">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      let teks = document.getElementById("teks").value.toLowerCase();
+      let vokal = 0, konsonan = 0;
+      for (let i = 0; i < teks.length; i++) {
+        if (["a", "e", "i", "o", "u"].includes(teks[i])) {
+          vokal++;
+        } else if (teks[i].match(/[b-df-hj-np-tv-z]/)) {
+          konsonan++;
+        }
+      }
+      document.getElementById("hasil").innerText = `Vokal: ${vokal}, Konsonan: ${konsonan}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gaya Teks</title>
+</head>
+<body>
+  <h2>Gaya Teks</h2>
+  <button onclick="ubahGaya()">Ubah Gaya</button>
+  <p id="teks">Ini adalah teks yang gaya-nya bisa diubah.</p>
+
+  <script>
+    function ubahGaya() {
+      let teks = document.getElementById("teks");
+      teks.style.fontFamily = "Arial, sans-serif";
+      teks.style.fontSize = "20px";
+      teks.style.fontWeight = "bold";
+      teks.style.color = "blue";
+    }
+  </script>
+</body>
+</html>

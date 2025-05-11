@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segitiga</title>
+</head>
+<body>
+  <h2>Hitung Segitiga</h2>
+
+  <label for="alas">Alas:</label>
+  <input type="number" id="alas"><br><br>
+
+  <label for="tinggi">Tinggi:</label>
+  <input type="number" id="tinggi"><br><br>
+
+  <label for="sisiA">Sisi A:</label>
+  <input type="number" id="sisiA"><br><br>
+
+  <label for="sisiB">Sisi B:</label>
+  <input type="number" id="sisiB"><br><br>
+
+  <label for="sisiC">Sisi C:</label>
+  <input type="number" id="sisiC"><br><br>
+
+  <button id="hitung">Hitung</button>
+
+  <script>
+    const alas = document.getElementById('alas');
+    const tinggi = document.getElementById('tinggi');
+    const sisiA = document.getElementById('sisiA');
+    const sisiB = document.getElementById('sisiB');
+    const sisiC = document.getElementById('sisiC');
+    const hitung = document.getElementById('hitung');
+
+    hitung.addEventListener('click', function () {
+      let a = parseFloat(alas.value);
+      let t = parseFloat(tinggi.value);
+      let sa = parseFloat(sisiA.value);
+      let sb = parseFloat(sisiB.value);
+      let sc = parseFloat(sisiC.value);
+
+      if (isNaN(a) || isNaN(t) || isNaN(sa) || isNaN(sb) || isNaN(sc)) {
+        console.log("Input tidak valid. Masukkan semua angka dengan benar.");
+        return;
+      }
+
+      let luas = 0.5 * a * t;
+      let keliling = sa + sb + sc;
+
+      console.log("=== Hasil Perhitungan Segitiga ===");
+      console.log("Alas:", a);
+      console.log("Tinggi:", t);
+      console.log("Luas:", luas.toFixed(2));
+      console.log("Keliling:", keliling.toFixed(2));
+    });
+  </script>
+</body>
+</html>

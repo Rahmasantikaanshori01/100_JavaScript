@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ubah Warna Latar Belakang</title>
+</head>
+<body>
+  <h2>Ubah Warna Latar Belakang</h2>
+  <button onclick="ubahWarna()">Ubah Warna</button>
+
+  <script>
+    function ubahWarna() {
+      let warna = "#" + Math.floor(Math.random() * 16777215).toString(16);
+      document.body.style.backgroundColor = warna;
+    }
+  </script>
+</body>
+</html>

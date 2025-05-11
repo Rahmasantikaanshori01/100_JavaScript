@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acak Angka</title>
+</head>
+<body>
+  <h2>Angka Acak (1-100)</h2>
+  <button onclick="acak()">Acak</button>
+  <p>Angka: <span id="hasil"></span></p>
+
+  <script>
+    function acak() {
+      let angka = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("hasil").innerText = angka;
+    }
+  </script>
+</body>
+</html>

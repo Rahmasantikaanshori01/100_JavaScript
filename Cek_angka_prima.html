@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angka Prima</title>
+</head>
+<body>
+  <h2>Cek Angka Prima</h2>
+  <input type="number" id="angka" placeholder="Masukkan angka">
+  <button onclick="cek()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cek() {
+      let n = parseInt(document.getElementById("angka").value);
+      let prima = n > 1;
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+          prima = false;
+          break;
+        }
+      }
+      document.getElementById("hasil").innerText = prima ? "Prima" : "Bukan prima";
+    }
+  </script>
+</body>
+</html>

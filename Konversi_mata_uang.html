@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konversi Mata Uang</title>
+</head>
+<body>
+  <h2>USD ke IDR</h2>
+  <input type="number" id="usd" placeholder="USD">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const usd = parseFloat(document.getElementById("usd").value);
+      const kurs = 15500; // kurs tetap (ubah sesuai nilai aktual)
+      const idr = usd * kurs;
+      document.getElementById("hasil").innerText = `Hasil: Rp ${idr.toLocaleString()}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hitung Belanja</title>
+</head>
+<body>
+  <h2>Total Belanja</h2>
+  <input type="number" id="item1" placeholder="Harga Barang 1"><br>
+  <input type="number" id="item2" placeholder="Harga Barang 2"><br>
+  <input type="number" id="item3" placeholder="Harga Barang 3"><br>
+  <button onclick="total()">Hitung</button>
+  <p>Total: Rp <span id="hasil"></span></p>
+
+  <script>
+    function total() {
+      let a = parseFloat(document.getElementById("item1").value) || 0;
+      let b = parseFloat(document.getElementById("item2").value) || 0;
+      let c = parseFloat(document.getElementById("item3").value) || 0;
+      document.getElementById("hasil").innerText = a + b + c;
+    }
+  </script>
+</body>
+</html>

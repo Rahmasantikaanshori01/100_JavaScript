@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List Dinamis</title>
+</head>
+<body>
+  <h2>List Dinamis</h2>
+  <input type="text" id="item" placeholder="Masukkan item">
+  <button onclick="tambahItem()">Tambah Item</button>
+  <ul id="list"></ul>
+
+  <script>
+    function tambahItem() {
+      let item = document.getElementById("item").value;
+      if (item) {
+        let li = document.createElement("li");
+        li.textContent = item;
+        document.getElementById("list").appendChild(li);
+        document.getElementById("item").value = "";
+      }
+    }
+  </script>
+</body>
+</html>

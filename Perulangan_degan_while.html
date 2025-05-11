@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perulangan While</title>
+</head>
+<body>
+  <h2>Perulangan 1 sampai 10</h2>
+  <button onclick="tampilkan()">Tampilkan</button>
+  <p id="hasil"></p>
+
+  <script>
+    function tampilkan() {
+      let i = 1;
+      let teks = "";
+      while (i <= 10) {
+        teks += i + " ";
+        i++;
+      }
+      document.getElementById("hasil").innerText = teks;
+    }
+  </script>
+</body>
+</html>

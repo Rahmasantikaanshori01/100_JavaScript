@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Vokal atau Konsonan</title></head>
+<body>
+  <h2>Cek Vokal/Konsonan</h2>
+  <input type="text" id="huruf" maxlength="1">
+  <button onclick="cek()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cek() {
+      const h = document.getElementById("huruf").value.toLowerCase();
+      if ("aeiou".includes(h)) {
+        document.getElementById("hasil").innerText = "Vokal";
+      } else if (h >= 'a' && h <= 'z') {
+        document.getElementById("hasil").innerText = "Konsonan";
+      } else {
+        document.getElementById("hasil").innerText = "Bukan huruf";
+      }
+    }
+  </script>
+</body>
+</html>

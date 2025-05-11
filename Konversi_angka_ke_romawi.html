@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konversi ke Romawi</title>
+</head>
+<body>
+  <h2>Konversi Angka ke Romawi</h2>
+  <input type="number" id="angka" placeholder="Masukkan angka">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      let angka = parseInt(document.getElementById("angka").value);
+      let romawi = "";
+      let angkaRomawi = [
+        [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], 
+        [100, "C"], [90, "XC"], [50, "L"], [40, "XL"],
+        [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]
+      ];
+      
+      for (let i = 0; i < angkaRomawi.length; i++) {
+        while (angka >= angkaRomawi[i][0]) {
+          romawi += angkaRomawi[i][1];
+          angka -= angkaRomawi[i][0];
+        }
+      }
+      document.getElementById("hasil").innerText = romawi;
+    }
+  </script>
+</body>
+</html>

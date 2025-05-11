@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deret Angka</title>
+</head>
+<body>
+  <h2>Deret Angka</h2>
+  <input type="number" id="awal" placeholder="Awal">
+  <input type="number" id="akhir" placeholder="Akhir">
+  <button onclick="tampilkanDeret()">Tampilkan</button>
+  <p id="hasil"></p>
+
+  <script>
+    function tampilkanDeret() {
+      const awal = parseInt(document.getElementById("awal").value);
+      const akhir = parseInt(document.getElementById("akhir").value);
+      let hasil = "";
+      for (let i = awal; i <= akhir; i++) {
+        hasil += i + " ";
+      }
+      document.getElementById("hasil").innerText = hasil;
+    }
+  </script>
+</body>
+</html>

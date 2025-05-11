@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Karakter Unik</title>
+</head>
+<body>
+  <h2>Karakter Unik</h2>
+  <input type="text" id="teks" placeholder="Masukkan teks">
+  <button onclick="unik()">Tampilkan</button>
+  <p id="hasil"></p>
+
+  <script>
+    function unik() {
+      let teks = document.getElementById("teks").value;
+      let unik = [...new Set(teks.split(""))].join("");
+      document.getElementById("hasil").innerText = unik;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Huruf Kapital</title>
+</head>
+<body>
+  <h2>Ubah ke Huruf Kapital</h2>
+  <input type="text" id="teks" placeholder="Tulis sesuatu">
+  <button onclick="ubah()">Ubah</button>
+  <p id="hasil"></p>
+
+  <script>
+    function ubah() {
+      let teks = document.getElementById("teks").value;
+      document.getElementById("hasil").innerText = teks.toUpperCase();
+    }
+  </script>
+</body>
+</html>

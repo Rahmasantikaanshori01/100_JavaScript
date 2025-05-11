@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pesan Selamat</title>
+</head>
+<body>
+  <h2>Pesan Selamat</h2>
+  <button onclick="selamat()">Tampilkan Pesan</button>
+  <p id="pesan"></p>
+
+  <script>
+    function selamat() {
+      let waktu = new Date().getHours();
+      let pesan = "";
+      if (waktu < 12) {
+        pesan = "Selamat Pagi!";
+      } else if (waktu < 18) {
+        pesan = "Selamat Siang!";
+      } else {
+        pesan = "Selamat Malam!";
+      }
+      document.getElementById("pesan").innerText = pesan;
+    }
+  </script>
+</body>
+</html>

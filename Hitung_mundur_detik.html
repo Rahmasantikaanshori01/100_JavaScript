@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Penghitung Mundur Detik</title>
+</head>
+<body>
+  <h2>Penghitung Mundur Detik</h2>
+  <p id="hitungMundur"></p>
+
+  <script>
+    let countdownDetik = 60; // 1 menit
+    let x = setInterval(function() {
+      document.getElementById("hitungMundur").innerText = countdownDetik + " detik";
+      countdownDetik--;
+      if (countdownDetik < 0) {
+        clearInterval(x);
+        document.getElementById("hitungMundur").innerText = "Waktu Habis";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

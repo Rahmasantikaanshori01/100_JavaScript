@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jajar Genjang</title>
+</head>
+<body>
+    <h2>Jajar Genjang</h2>
+    <input id="aJG" placeholder="Alas">
+    <input id="tJG" placeholder="Tinggi">
+    <input id="sJG" placeholder="Sisi Miring">
+    <button onclick="hitungJG()">Hitung</button>
+  
+    <script>
+      function hitungJG() {
+        let a = parseFloat(document.getElementById('aJG').value);
+        let t = parseFloat(document.getElementById('tJG').value);
+        let s = parseFloat(document.getElementById('sJG').value);
+        let luas = a * t;
+        let keliling = 2 * (a + s);
+        console.log("=== Jajar Genjang ===");
+        console.log("Luas:", luas);
+        console.log("Keliling:", keliling);
+      }
+    </script>
+  </body>
+</html>

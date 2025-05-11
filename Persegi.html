@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persegi</title>
+</head>
+<body>
+    <h2>Persegi</h2>
+    <input id="sPersegi" placeholder="Sisi">
+    <button onclick="hitungPersegi()">Hitung</button>
+  
+    <script>
+      function hitungPersegi() {
+        let s = parseFloat(document.getElementById('sPersegi').value);
+        let luas = s * s;
+        let keliling = 4 * s;
+        console.log("=== Persegi ===");
+        console.log("Luas:", luas);
+        console.log("Keliling:", keliling);
+      }
+    </script>
+  </body>
+</html>

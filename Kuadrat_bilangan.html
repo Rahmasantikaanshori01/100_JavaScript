@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Kuadrat Bilangan</title></head>
+<body>
+  <h2>Hitung Kuadrat</h2>
+  <input type="number" id="angka" placeholder="Masukkan angka">
+  <button onclick="kuadrat()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function kuadrat() {
+      let angka = parseFloat(document.getElementById("angka").value);
+      let hasil = angka ** 2;
+      document.getElementById("hasil").innerText = `Kuadrat: ${hasil}`;
+    }
+  </script>
+</body>
+</html>

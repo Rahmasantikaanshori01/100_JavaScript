@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faktor Prima</title>
+</head>
+<body>
+  <h2>Faktor Prima</h2>
+  <input type="number" id="angka" placeholder="Masukkan angka">
+  <button onclick="faktorPrima()">Hitung Faktor Prima</button>
+  <p id="hasil"></p>
+
+  <script>
+    function faktorPrima() {
+      let angka = parseInt(document.getElementById("angka").value);
+      let faktor = [];
+      for (let i = 2; i <= angka; i++) {
+        while (angka % i === 0) {
+          faktor.push(i);
+          angka /= i;
+        }
+      }
+      document.getElementById("hasil").innerText = `Faktor prima: ${faktor.join(", ")}`;
+    }
+  </script>
+</body>
+</html>

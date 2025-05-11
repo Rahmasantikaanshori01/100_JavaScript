@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faktor Bilangan</title>
+</head>
+<body>
+  <h2>Faktor Bilangan</h2>
+  <input type="number" id="angka" placeholder="Masukkan angka">
+  <button onclick="hitungFaktor()">Hitung Faktor</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitungFaktor() {
+      let angka = parseInt(document.getElementById("angka").value);
+      let faktor = [];
+      for (let i = 1; i <= angka; i++) {
+        if (angka % i === 0) {
+          faktor.push(i);
+        }
+      }
+      document.getElementById("hasil").innerText = `Faktor: ${faktor.join(", ")}`;
+    }
+  </script>
+</body>
+</html>

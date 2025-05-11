@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hitung Rata-rata</title>
+</head>
+<body>
+  <h2>Hitung Rata-rata Angka</h2>
+  <input type="number" id="angka1" placeholder="Angka 1">
+  <input type="number" id="angka2" placeholder="Angka 2">
+  <input type="number" id="angka3" placeholder="Angka 3">
+  <button onclick="hitungRata()">Hitung Rata-rata</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitungRata() {
+      let angka1 = parseFloat(document.getElementById("angka1").value);
+      let angka2 = parseFloat(document.getElementById("angka2").value);
+      let angka3 = parseFloat(document.getElementById("angka3").value);
+      let rata = (angka1 + angka2 + angka3) / 3;
+      document.getElementById("hasil").innerText = "Rata-rata: " + rata;
+    }
+  </script>
+</

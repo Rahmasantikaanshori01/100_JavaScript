@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Penghitung Mundur</title>
+</head>
+<body>
+  <h2>Penghitung Mundur Menit</h2>
+  <p id="hitungMundur"></p>
+
+  <script>
+    let countdownMenit = 10 * 60; // 10 menit
+    let x = setInterval(function() {
+      let menit = Math.floor(countdownMenit / 60);
+      let detik = countdownMenit % 60;
+      document.getElementById("hitungMundur").innerText = `${menit} menit ${detik} detik`;
+      countdownMenit--;
+      if (countdownMenit < 0) {
+        clearInterval(x);
+        document.getElementById("hitungMundur").innerText = "Waktu Habis";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

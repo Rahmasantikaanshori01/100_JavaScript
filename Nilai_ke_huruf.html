@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Nilai Huruf</title></head>
+<body>
+  <h2>Konversi Skor ke Nilai</h2>
+  <input type="number" id="skor" placeholder="Masukkan skor (0-100)">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      let skor = parseInt(document.getElementById("skor").value);
+      let nilai = skor >= 90 ? "A" :
+                  skor >= 80 ? "B" :
+                  skor >= 70 ? "C" :
+                  skor >= 60 ? "D" : "E";
+      document.getElementById("hasil").innerText = `Nilai: ${nilai}`;
+    }
+  </script>
+</body>
+</html>

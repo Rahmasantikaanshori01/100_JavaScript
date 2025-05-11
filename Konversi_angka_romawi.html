@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Angka ke Romawi</title></head>
+<body>
+  <h2>Angka ke Romawi</h2>
+  <input type="number" id="angka" placeholder="1-100">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const angka = parseInt(document.getElementById("angka").value);
+      const romawi = ["","I","II","III","IV","V","VI","VII","VIII","IX"];
+      const puluhan = ["","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"];
+      const ratusan = ["","C"];
+
+      if (angka <= 0 || angka > 100) {
+        document.getElementById("hasil").innerText = "Diluar jangkauan!";
+        return;
+      }
+
+      let r = ratusan[Math.floor(angka / 100)] +
+              puluhan[Math.floor((angka % 100) / 10)] +
+              romawi[angka % 10];
+      document.getElementById("hasil").innerText = r;
+    }
+  </script>
+</body>
+</html>

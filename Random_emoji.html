@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Emoji Random</title></head>
+<body>
+  <h2>Emoji Random</h2>
+  <button onclick="tampilkan()">Tampilkan Emoji</button>
+  <p id="emoji"></p>
+
+  <script>
+    const emojis = ["😊", "😂", "😎", "🥲", "🤔", "😡", "❤️", "🎉", "🚀"];
+    function tampilkan() {
+      let index = Math.floor(Math.random() * emojis.length);
+      document.getElementById("emoji").innerText = emojis[index];
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konversi Panjang</title>
+</head>
+<body>
+  <h2>Konversi Meter ke Cm dan Km</h2>
+  <input type="number" id="meter" placeholder="Meter">
+  <button onclick="konversi()">Konversi</button>
+  <p>Centimeter: <span id="cm"></span></p>
+  <p>Kilometer: <span id="km"></span></p>
+
+  <script>
+    function konversi() {
+      let m = parseFloat(document.getElementById("meter").value);
+      document.getElementById("cm").innerText = m * 100;
+      document.getElementById("km").innerText = m / 1000;
+    }
+  </script>
+</body>
+</html>

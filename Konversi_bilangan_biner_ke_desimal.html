@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Biner ke Desimal</title></head>
+<body>
+  <h2>Biner ke Desimal</h2>
+  <input type="text" id="biner" placeholder="Masukkan biner">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      let biner = document.getElementById("biner").value;
+      let desimal = parseInt(biner, 2);
+      document.getElementById("hasil").innerText = `Desimal: ${desimal}`;
+    }
+  </script>
+</body>
+</html>

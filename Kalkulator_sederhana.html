@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Dasar</title>
+</head>
+<body>
+  <h2>Kalkulator Dasar</h2>
+  <input type="number" id="angka1"> 
+  <select id="operator">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="number" id="angka2">
+  <button onclick="hitung()">Hitung</button>
+  <p>Hasil: <span id="hasil"></span></p>
+
+  <script>
+    function hitung() {
+      let a = parseFloat(document.getElementById("angka1").value);
+      let b = parseFloat(document.getElementById("angka2").value);
+      let op = document.getElementById("operator").value;
+      let result;
+      if (op === "+") result = a + b;
+      else if (op === "-") result = a - b;
+      else if (op === "*") result = a * b;
+      else if (op === "/") result = b !== 0 ? a / b : "Tak hingga";
+      document.getElementById("hasil").innerText = result;
+    }
+  </script>
+</body>
+</html>

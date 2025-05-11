@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerucut</title>
+</head>
+<body>
+    <h2>Kerucut</h2>
+    <input id="rK" placeholder="Jari-jari">
+    <input id="tK" placeholder="Tinggi">
+    <button onclick="hitungKerucut()">Hitung</button>
+  
+    <script>
+      function hitungKerucut() {
+        let r = parseFloat(document.getElementById('rK').value);
+        let t = parseFloat(document.getElementById('tK').value);
+        let s = Math.sqrt(r*r + t*t); // garis pelukis
+        let phi = 3.14;
+        let volume = (1/3) * phi * r**2 * t;
+        let luas = phi * r * (r + s);
+        console.log("=== Kerucut ===");
+        console.log("Volume:", volume.toFixed(2));
+        console.log("Luas Permukaan:", luas.toFixed(2));
+      }
+    </script>
+  </body>
+</html>

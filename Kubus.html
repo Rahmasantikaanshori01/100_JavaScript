@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubus</title>
+</head>
+<body>
+    <h2>Kubus</h2>
+    <input id="s" placeholder="Sisi">
+    <button onclick="hitungKubus()">Hitung</button>
+  
+    <script>
+      function hitungKubus() {
+        let s = parseFloat(document.getElementById('s').value);
+        let volume = s ** 3;
+        let luas = 6 * s * s;
+        console.log("=== Kubus ===");
+        console.log("Volume:", volume);
+        console.log("Luas Permukaan:", luas);
+      }
+    </script>
+  </body>
+</html>

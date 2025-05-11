@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hitung Kata</title>
+</head>
+<body>
+  <h2>Hitung Jumlah Kata</h2>
+  <input type="text" id="kalimat" placeholder="Masukkan kalimat">
+  <button onclick="hitung()">Hitung</button>
+  <p>Jumlah kata: <span id="hasil"></span></p>
+
+  <script>
+    function hitung() {
+      let teks = document.getElementById("kalimat").value.trim();
+      let kata = teks === "" ? 0 : teks.split(/\s+/).length;
+      document.getElementById("hasil").innerText = kata;
+    }
+  </script>
+</body>
+</html>

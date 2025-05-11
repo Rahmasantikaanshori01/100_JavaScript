@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konversi Suhu</title>
+</head>
+<body>
+  <h2>Konversi Celcius ke Fahrenheit & Kelvin</h2>
+  <input type="number" id="celcius" placeholder="Celcius">
+  <button onclick="konversi()">Konversi</button>
+  <p>Fahrenheit: <span id="f"></span></p>
+  <p>Kelvin: <span id="k"></span></p>
+
+  <script>
+    function konversi() {
+      let c = parseFloat(document.getElementById("celcius").value);
+      let f = (9/5 * c) + 32;
+      let k = c + 273.15;
+      document.getElementById("f").innerText = f;
+      document.getElementById("k").innerText = k;
+    }
+  </script>
+</body>
+</html>

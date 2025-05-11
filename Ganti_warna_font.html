@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ganti Warna Font</title>
+</head>
+<body>
+  <h2>Ganti Warna Font</h2>
+  <button onclick="ubahWarna()">Ganti Warna</button>
+  <p id="teks">Ini adalah teks yang akan berubah warnanya</p>
+
+  <script>
+    function ubahWarna() {
+      let warna = "#" + Math.floor(Math.random() * 16777215).toString(16);
+      document.getElementById("teks").style.color = warna;
+    }
+  </script>
+</body>
+</html>

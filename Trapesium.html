@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapesium</title>
+</head>
+<body>
+    <h2>Trapesium</h2>
+    <input id="a" placeholder="Sisi Atas">
+    <input id="b" placeholder="Sisi Bawah">
+    <input id="tTrap" placeholder="Tinggi">
+    <input id="s1" placeholder="Sisi Miring 1">
+    <input id="s2" placeholder="Sisi Miring 2">
+    <button onclick="hitungTrapesium()">Hitung</button>
+  
+    <script>
+      function hitungTrapesium() {
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let t = parseFloat(document.getElementById('tTrap').value);
+        let s1 = parseFloat(document.getElementById('s1').value);
+        let s2 = parseFloat(document.getElementById('s2').value);
+        let luas = 0.5 * (a + b) * t;
+        let keliling = a + b + s1 + s2;
+        console.log("=== Trapesium ===");
+        console.log("Luas:", luas);
+        console.log("Keliling:", keliling);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bola</title>
+</head>
+<body>
+    <h2>Bola</h2>
+    <input id="rBola" placeholder="Jari-jari">
+    <button onclick="hitungBola()">Hitung</button>
+  
+    <script>
+      function hitungBola() {
+        let r = parseFloat(document.getElementById('rBola').value);
+        let phi = 3.14;
+        let volume = 4/3 * phi * r**3;
+        let luas = 4 * phi * r**2;
+        console.log("=== Bola ===");
+        console.log("Volume:", volume.toFixed(2));
+        console.log("Luas Permukaan:", luas.toFixed(2));
+      }
+    </script>
+  </body>
+</html>

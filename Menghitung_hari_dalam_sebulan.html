@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hari dalam Sebulan</title>
+</head>
+<body>
+  <h2>Hari dalam Sebulan</h2>
+  <input type="month" id="bulan">
+  <button onclick="hitungHari()">Hitung Hari</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitungHari() {
+      let bulan = document.getElementById("bulan").value;
+      let tanggal = new Date(bulan + "-01");
+      let bulanKe = tanggal.getMonth();
+      let hariTerakhir = new Date(tanggal.getFullYear(), bulanKe + 1, 0);
+      let hari = hariTerakhir.getDate();
+      document.getElementById("hasil").innerText = `Jumlah hari: ${hari}`;
+    }
+  </script>
+</body>
+</html>

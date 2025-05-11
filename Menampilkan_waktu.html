@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Waktu Pagi, Siang, Malam</title>
+</head>
+<body>
+  <h2>Waktu Pagi, Siang, atau Malam</h2>
+  <button onclick="tampilkanWaktu()">Tampilkan Waktu</button>
+  <p id="hasil"></p>
+
+  <script>
+    function tampilkanWaktu() {
+      let waktu = new Date().getHours();
+      let pesan = "";
+      if (waktu < 12) {
+        pesan = "Selamat Pagi!";
+      } else if (waktu < 18) {
+        pesan = "Selamat Siang!";
+      } else {
+        pesan = "Selamat Malam!";
+      }
+      document.getElementById("hasil").innerText = pesan;
+    }
+  </script>
+</body>
+</html>
